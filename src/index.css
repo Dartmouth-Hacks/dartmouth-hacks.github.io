@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap');
+
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+
+body {
+  font-family: 'Jura', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Font faces: attempt to use locally available fonts */
+@font-face {
+  font-family: 'Geist';
+  src: local('Geist'), local('Geist Regular'), local('Geist-Regular');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DREAMS';
+  src: local('DREAMS'), local('Dreams'), local('DREAMS Regular'), local('Dreams-Regular');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Use Geist for all header elements */
+header, header * {
+  font-family: 'Geist', sans-serif;
+}
+
+/* Utility class for DREAMS font */
+.font-dreams {
+  font-family: 'DREAMS', cursive;
+}
+
+/* Spacey site background with subtle stars */
+.space-bg {
+  background-color: #081018;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.18) 0, rgba(255,255,255,0.18) 40%, transparent 41%),
+    radial-gradient(1px 1px at 70% 60%, rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 40%, transparent 41%),
+    radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 40%, transparent 41%),
+    radial-gradient(1px 1px at 85% 20%, rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 40%, transparent 41%),
+    radial-gradient(800px 400px at 50% -20%, rgba(27,55,79,0.8), rgba(8,16,24,0.9));
+  color: #c7d3de;
+}
+
+/* Cyan neon text glow for hero */
+.neon-cyan {
+  color: #2bffff;
+  text-shadow: 0 0 6px rgba(43,255,255,0.8), 0 0 20px rgba(43,255,255,0.5);
+}
+
+/* Neon button */
+.btn-neon {
+  border: 1px solid #2bffff;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(43,255,255,0.2), rgba(43,255,255,0.08));
+  box-shadow: 0 0 10px rgba(43,255,255,0.4), inset 0 0 8px rgba(43,255,255,0.25);
+}
+.btn-neon:hover {
+  box-shadow: 0 0 14px rgba(43,255,255,0.6), inset 0 0 10px rgba(43,255,255,0.35);
+}
+
+/* Glowing cyan panel */
+.panel-neon {
+  border: 2px solid rgba(43,255,255,0.6);
+  box-shadow: 0 0 14px rgba(43,255,255,0.6), 0 0 40px rgba(43,255,255,0.25);
+  background: rgba(0, 8, 14, 0.55);
+}
+
+/* Subtle cyan glow dots pattern */
+/* (removed orb dots) */
+
+/* (removed crosshair helpers) */
+
+/* Orange code-style section label */
+.section-label {
+  color: #ff7a1a;
+  letter-spacing: 0.08em;
+}
+
+/* Simple fade + slide animation */
+.fade-slide-enter {
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+}
+.fade-slide-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+/* Flip card helper styles */
+.flip-card { perspective: 1200px; display: block; width: 100%; height: 100%; border-radius: 12px; }
+.flip-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 600ms cubic-bezier(.2,.7,.2,1); }
+.flip-inner.is-flipped { transform: rotateY(180deg); }
+.flip-face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 12px; }
+.flip-back { transform: rotateY(180deg); }
+
+/* 3-up carousel animation */
+.carousel-stage { position: relative; height: 15rem; }
+.carousel-item { position: absolute; top: 0; width: 58%; left: 21%; transition: transform 420ms ease, opacity 420ms ease, filter 420ms ease; }
+.carousel-left { transform: translateX(-120%) scale(0.85); opacity: 0.8; filter: saturate(0.8); }
+.carousel-center { transform: translateX(0) scale(1); opacity: 1; filter: saturate(1); }
+.carousel-right { transform: translateX(120%) scale(0.85); opacity: 0.8; filter: saturate(0.8); }
+@media (min-width: 768px) {
+  .carousel-stage { height: 18rem; }
+  .carousel-item { width: 52%; left: 24%; }
+}
