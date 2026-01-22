@@ -13,7 +13,13 @@ export default function Footer() {
           <a href="#" aria-label="Instagram" className="text-slate-400 hover:text-white">
             <Instagram size={18} />
           </a>
-          <a href="#" aria-label="LinkedIn" className="text-slate-400 hover:text-white">
+          <a
+            href="https://www.linkedin.com/company/hackdartmouth/"
+            aria-label="LinkedIn"
+            className="text-slate-400 hover:text-white"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Linkedin size={18} />
           </a>
           <a href="mailto:dartmouthhackathon@gmail.com" aria-label="Email" className="text-slate-400 hover:text-white">

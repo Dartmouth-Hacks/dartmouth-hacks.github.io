@@ -33,6 +33,11 @@ header, header * {
   font-family: 'Geist', sans-serif;
 }
 
+/* Ensure mobile dropdown uses the same header font */
+.mobile-header, .mobile-header * {
+  font-family: 'Geist', sans-serif;
+}
+
 /* Utility class for DREAMS font */
 .font-dreams {
   font-family: 'DREAMS', cursive;
@@ -95,13 +100,6 @@ header, header * {
   transform: translateY(0) scale(1);
   transition: opacity 400ms ease, transform 400ms ease;
 }
-
-/* Flip card helper styles */
-.flip-card { perspective: 1200px; display: block; width: 100%; height: 100%; border-radius: 12px; }
-.flip-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 600ms cubic-bezier(.2,.7,.2,1); }
-.flip-inner.is-flipped { transform: rotateY(180deg); }
-.flip-face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 12px; }
-.flip-back { transform: rotateY(180deg); }
 
 /* 3-up carousel animation */
 .carousel-stage { position: relative; height: 15rem; }
