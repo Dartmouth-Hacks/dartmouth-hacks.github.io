@@ -38,13 +38,13 @@ export default function Sponsors() {
 
         <div className="flex flex-col gap-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {featuredSponsors.map((sponsor) => (
+            {featuredSponsors.map(sponsor => (
               <SponsorCard key={sponsor.name} {...sponsor} className="h-32 sm:h-36 md:h-40" />
             ))}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {supportingSponsors.map((sponsor) => (
+            {supportingSponsors.map(sponsor => (
               <SponsorCard key={sponsor.name} {...sponsor} className="h-24 sm:h-28 md:h-32" />
             ))}
           </div>

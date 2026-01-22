@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import MLHLogo from '../assets/images/MLHLogo.svg';
 import HackLogo from '../assets/images/hackDartmouthLogo.svg';
+
+const navItems = [
+  { label: 'HackDartmouth', href: '#hero' },
+  { label: 'About', href: '#about' },
+  { label: 'Apply', href: '#apply' },
+  { label: 'FAQ', href: '#faq' },
+  { label: 'Contact', href: '#contact' },
+];
 export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
@@ -15,12 +23,13 @@ export function Navbar() {
           {/* Desktop nav */}
           <nav className="hidden md:block">
             <ul className="flex items-center gap-6 md:gap-8 text-sm md:text-base text-slate-300">
-              <li><a href="#" className="hover:text-white">Apply</a></li>
-              <li><a href="#" className="hover:text-white">About</a></li>
-              <li><a href="#faq" className="hover:text-white">FAQ</a></li>
-              <li><a href="#" className="hover:text-white">Tracks</a></li>
-              <li><a href="#" className="hover:text-white">Contact</a></li>
-              <li><a href="#" className="hover:text-white">Schedule</a></li>
+              {navItems.map(item => (
+                <li key={item.label}>
+                  <a href={item.href} className="hover:text-white">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </nav>
 
@@ -41,12 +50,17 @@ export function Navbar() {
       {open && (
         <nav className="md:hidden w-full bg-black/80 border-b border-white/10 mobile-header">
           <ul className="max-w-6xl mx-auto px-4 py-2 grid gap-0 text-slate-200 text-base">
-            <li><a onClick={() => setOpen(false)} href="#" className="block py-2 hover:text-white">Apply</a></li>
-            <li><a onClick={() => setOpen(false)} href="#" className="block py-2 hover:text-white">About</a></li>
-            <li><a onClick={() => setOpen(false)} href="#faq" className="block py-2 hover:text-white">FAQ</a></li>
-            <li><a onClick={() => setOpen(false)} href="#" className="block py-2 hover:text-white">Tracks</a></li>
-            <li><a onClick={() => setOpen(false)} href="#" className="block py-2 hover:text-white">Contact</a></li>
-            <li><a onClick={() => setOpen(false)} href="#" className="block py-2 hover:text-white">Schedule</a></li>
+            {navItems.map(item => (
+              <li key={item.label}>
+                <a
+                  onClick={() => setOpen(false)}
+                  href={item.href}
+                  className="block py-2 hover:text-white"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       )}

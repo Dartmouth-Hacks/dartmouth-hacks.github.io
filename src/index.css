@@ -101,13 +101,101 @@ header, header * {
   transition: opacity 400ms ease, transform 400ms ease;
 }
 
+/* Flip card helper styles */
+.flip-card {
+  perspective: 1200px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(.2,.7,.2,1);
+}
+.flip-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
 /* 3-up carousel animation */
-.carousel-stage { position: relative; height: 15rem; }
-.carousel-item { position: absolute; top: 0; width: 58%; left: 21%; transition: transform 420ms ease, opacity 420ms ease, filter 420ms ease; }
-.carousel-left { transform: translateX(-120%) scale(0.85); opacity: 0.8; filter: saturate(0.8); }
-.carousel-center { transform: translateX(0) scale(1); opacity: 1; filter: saturate(1); }
-.carousel-right { transform: translateX(120%) scale(0.85); opacity: 0.8; filter: saturate(0.8); }
-@media (min-width: 768px) {
-  .carousel-stage { height: 18rem; }
-  .carousel-item { width: 52%; left: 24%; }
+.carousel-stage {
+  position: relative;
+  height: 24rem;
+}
+.carousel-item {
+  position: absolute;
+  top: 0;
+  width: 32%;
+  transition: transform 420ms ease, opacity 420ms ease, left 420ms ease;
+  opacity: 0.85;
+  filter: saturate(0.9);
+}
+.carousel-left {
+  left: 0;
+  transform: translateX(-5%) scale(0.95);
+}
+.carousel-center {
+  left: 34%;
+  opacity: 1;
+  filter: saturate(1);
+  transform: scale(1.05);
+}
+.carousel-right {
+  left: 68%;
+  transform: translateX(5%) scale(0.95);
+}
+.carousel-enter-right {
+  opacity: 0;
+  animation: carouselEnterRight 0.35s forwards 0.18s;
+}
+.carousel-enter-left {
+  opacity: 0;
+  animation: carouselEnterLeft 0.35s forwards 0.18s;
+}
+@keyframes carouselEnterRight {
+  from {
+    opacity: 0;
+    transform: translateX(20%) scale(0.85);
+  }
+  to {
+    opacity: 0.85;
+    transform: translateX(5%) scale(0.95);
+  }
+}
+@keyframes carouselEnterLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20%) scale(0.85);
+  }
+  to {
+    opacity: 0.85;
+    transform: translateX(-5%) scale(0.95);
+  }
+}
+@media (max-width: 900px) {
+  .carousel-stage {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .carousel-item {
+    position: static;
+    width: 80%;
+    opacity: 1;
+    transform: none;
+  }
 }

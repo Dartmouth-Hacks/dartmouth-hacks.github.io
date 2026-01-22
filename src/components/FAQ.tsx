@@ -1,16 +1,74 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-const faqs = [
-  'What is a hackathon?',
-  'Who can participate?',
-  'How do teams work?',
-  'What should I bring?',
-  'When is the deadline to register?',
-  'Will there be activities or workshops?',
+type FAQEntry = {
+  question: string;
+  answer: React.ReactNode;
+};
+
+const faqs: FAQEntry[] = [
+  {
+    question: 'What is a Hackathon?',
+    answer:
+      'A hackathon is a 24-hour tech-focused sprint where students come together to build software and hardware projects. Bring an idea, a team, or just your curiosity and create something amazing.',
+  },
+  {
+    question: 'Who can participate?',
+    answer:
+      "Any current college student! No experience is required—we'll host workshops throughout the weekend so you can pick up new skills as you build.",
+  },
+  {
+    question: 'How do teams work?',
+    answer:
+      "You can hack solo or in a team. We'll run a team formation social before hacking starts, so it's fine to arrive without a group in mind.",
+  },
+  {
+    question: 'What should I bring?',
+    answer:
+      'Bring a laptop, chargers, headphones, and anything else you need to feel comfortable—from toiletries to your favorite blanket. Meals and snacks are on us.',
+  },
+  {
+    question: 'When is the deadline to register?',
+    answer:
+      'Dartmouth students can apply through April 18. Participants from other schools should apply by April 4.',
+  },
+  {
+    question: 'How do I travel to HackDartmouth?',
+    answer:
+      'We provide free shuttles from Boston and New York on the morning of the event for admitted hackers. Due to budget limits we cannot offer individual travel reimbursements.',
+  },
+  {
+    question: 'What can I win?',
+    answer:
+      'Judges look at creativity, usefulness, technical difficulty, and form. Top prizes are TBA; past winners have taken home drones, Apple Watches, Nintendo Switches, Bluetooth speakers, and more.',
+  },
+  {
+    question: 'What if I have other questions?',
+    answer: 'Email hackdartmouth@gmail.com and we will get back to you as soon as possible.',
+  },
+  {
+    question: 'What is the MLH Code of Conduct?',
+    answer: (
+      <span>
+        Review the guidelines on the{' '}
+        <a
+          href="https://mlh.io/code-of-conduct"
+          target="_blank"
+          rel="noreferrer"
+          className="text-cyan-300 hover:text-white underline"
+        >
+          MLH Code of Conduct page
+        </a>
+        .
+      </span>
+    ),
+  },
 ];
 
 export function FAQ() {
+  const midpoint = Math.ceil(faqs.length / 2);
+  const columns = [faqs.slice(0, midpoint), faqs.slice(midpoint)];
+
   return (
     <section
       id="faq"
@@ -23,21 +81,19 @@ export function FAQ() {
 
       {/* Two-column grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl">
-        {/* LEFT COLUMN */}
-        <div className="flex flex-col gap-6">
-          {faqs.map((q, idx) => (idx < faqs.length / 2 ? <FAQItem key={idx} question={q} /> : null))}
-        </div>
-
-        {/* RIGHT COLUMN */}
-        <div className="flex flex-col gap-6">
-          {faqs.map((q, idx) => (idx >= faqs.length / 2 ? <FAQItem key={idx} question={q} /> : null))}
-        </div>
+        {columns.map((column, colIdx) => (
+          <div key={colIdx} className="flex flex-col gap-6">
+            {column.map(entry => (
+              <FAQItem key={entry.question} entry={entry} />
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   );
 }
 
-function FAQItem({ question }: { question: string }) {
+function FAQItem({ entry }: { entry: FAQEntry }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -54,15 +110,17 @@ function FAQItem({ question }: { question: string }) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <span className="w-3.5 h-3.5 rounded-full bg-lime-300 shadow-[0_0_12px_4px_rgba(144,250,144,0.7)]"></span>
-          <span className="text-lg text-gray-200">{question}</span>
+          <span className="text-lg text-gray-200">{entry.question}</span>
         </div>
 
         <ChevronDown className={`text-cyan-300 text-xl transition-transform ${open ? 'rotate-180' : ''}`} />
       </div>
 
       {/* Answer */}
-      <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-40 mt-4 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <p className="text-gray-300 text-sm leading-relaxed">Placeholder answer text here.</p>
+      <div
+        className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-64 mt-4 opacity-100' : 'max-h-0 opacity-0'}`}
+      >
+        <p className="text-gray-300 text-sm leading-relaxed">{entry.answer}</p>
       </div>
     </div>
   );
