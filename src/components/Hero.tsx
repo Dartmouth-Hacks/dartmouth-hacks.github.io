@@ -17,14 +17,13 @@ export function Hero() {
         >
           Register
         </a>
-        <a
+        <button
+          type="button"
+          disabled
           className="btn-neon rounded px-5 py-2 text-sm bg-slate-600/40 text-slate-200 opacity-70 cursor-not-allowed"
-          href="https://hackdartmouth.devpost.com/"
-          target="_blank"
-          rel="noreferrer"
         >
           Devpost
-        </a>
+        </button>
       </div>
       {/* grid floor effect */}
       <div className="pointer-events-none absolute left-0 right-0 -bottom-10 h-64 opacity-40" aria-hidden>
