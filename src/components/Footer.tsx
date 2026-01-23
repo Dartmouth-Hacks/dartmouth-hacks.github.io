@@ -9,14 +9,14 @@ export default function Footer() {
           <h3 className="text-white text-lg tracking-wide">HackDartmouth</h3>
           <p>
             Have any questions? Contact:{' '}
-            <a href="mailto:hackdartmouth@gmail.com" className="text-orange-300 hover:text-white">
-              hackdartmouth@gmail.com
+            <a href="mailto:dartmouthhackathon@gmail.com" className="text-orange-300 hover:text-white">
+              dartmouthhackathon@gmail.com
             </a>
           </p>
           <p>
             Want to be a sponsor? Contact:{' '}
-            <a href="mailto:hackdartmouth@gmail.com" className="text-orange-300 hover:text-white">
-              hackdartmouth@gmail.com
+            <a href="mailto:dartmouthhackathon@gmail.com" className="text-orange-300 hover:text-white">
+              dartmouthhackathon@gmail.com
             </a>
           </p>
         </div>

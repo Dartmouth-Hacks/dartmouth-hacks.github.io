@@ -44,7 +44,7 @@ const faqs: FAQEntry[] = [
   },
   {
     question: 'What if I have other questions?',
-    answer: 'Email hackdartmouth@gmail.com and we will get back to you as soon as possible.',
+    answer: 'Email dartmouthhackathon@gmail.com and we will get back to you as soon as possible.',
   },
   {
     question: 'What is the MLH Code of Conduct?',
