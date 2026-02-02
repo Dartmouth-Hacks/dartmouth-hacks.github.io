@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 type FAQEntry = {
   question: string;
@@ -8,49 +8,49 @@ type FAQEntry = {
 
 const faqs: FAQEntry[] = [
   {
-    question: 'What is a Hackathon?',
+    question: "What is a Hackathon?",
     answer:
-      'A hackathon is a 24-hour tech-focused sprint where students come together to build software and hardware projects. Bring an idea, a team, or just your curiosity and create something amazing.',
+      "A hackathon is a 24-hour tech-focused sprint where students come together to build software and hardware projects. Bring an idea, a team, or just your curiosity and create something amazing.",
   },
   {
-    question: 'Who can participate?',
+    question: "Who can participate?",
     answer:
       "Any current college student! No experience is required—we'll host workshops throughout the weekend so you can pick up new skills as you build.",
   },
   {
-    question: 'How do teams work?',
+    question: "How do teams work?",
     answer:
       "You can hack solo or in a team. We'll run a team formation social before hacking starts, so it's fine to arrive without a group in mind.",
   },
   {
-    question: 'What should I bring?',
+    question: "What should I bring?",
     answer:
-      'Bring a laptop, chargers, headphones, and anything else you need to feel comfortable—from toiletries to your favorite blanket. Meals and snacks are on us.',
+      "Bring a laptop, chargers, headphones, and anything else you need to feel comfortable—from toiletries to your favorite blanket. Meals and snacks are on us.",
   },
   {
-    question: 'When is the deadline to register?',
+    question: "When is the deadline to register?",
+    answer: "Participants should apply by March 20.",
+  },
+  {
+    question: "How do I travel to HackDartmouth?",
     answer:
-      'Dartmouth students can apply through April 18. Participants from other schools should apply by April 4.',
+      "Due to budget constraints, HackDartmouth currently will not be able to provide travel reimbursement. You will receive details on how to book travel to Dartmouth once your application is accepted to the hackathon!",
   },
   {
-    question: 'How do I travel to HackDartmouth?',
+    question: "What can I win?",
     answer:
-      'We provide free shuttles from Boston and New York on the morning of the event for admitted hackers. Due to budget limits we cannot offer individual travel reimbursements.',
+      "Judges look at creativity, usefulness, technical difficulty, and form. Top prizes are TBA; past winners have taken home drones, Apple Watches, Nintendo Switches, Bluetooth speakers, and more.",
   },
   {
-    question: 'What can I win?',
+    question: "What if I have other questions?",
     answer:
-      'Judges look at creativity, usefulness, technical difficulty, and form. Top prizes are TBA; past winners have taken home drones, Apple Watches, Nintendo Switches, Bluetooth speakers, and more.',
+      "Email dartmouthhackathon@gmail.com and we will get back to you as soon as possible.",
   },
   {
-    question: 'What if I have other questions?',
-    answer: 'Email dartmouthhackathon@gmail.com and we will get back to you as soon as possible.',
-  },
-  {
-    question: 'What is the MLH Code of Conduct?',
+    question: "What is the MLH Code of Conduct?",
     answer: (
       <span>
-        Review the guidelines on the{' '}
+        Review the guidelines on the{" "}
         <a
           href="https://mlh.io/code-of-conduct"
           target="_blank"
@@ -83,7 +83,7 @@ export function FAQ() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl">
         {columns.map((column, colIdx) => (
           <div key={colIdx} className="flex flex-col gap-6">
-            {column.map(entry => (
+            {column.map((entry) => (
               <FAQItem key={entry.question} entry={entry} />
             ))}
           </div>
@@ -97,14 +97,15 @@ function FAQItem({ entry }: { entry: FAQEntry }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div onClick={() => setOpen(!open)} className="relative px-8 py-5 cursor-pointer select-none">
+    <div
+      onClick={() => setOpen(!open)}
+      className="relative px-8 py-5 cursor-pointer select-none"
+    >
       {/* Four blueprint bracket corners */}
       <span className="absolute top-0 left-0 w-6 h-6 border-t border-l border-cyan-400/60 rounded-none pointer-events-none" />
       <span className="absolute top-0 right-0 w-6 h-6 border-t border-r border-cyan-400/60 rounded-none pointer-events-none" />
       <span className="absolute bottom-0 left-0 w-6 h-6 border-b border-l border-cyan-400/60 rounded-none pointer-events-none" />
       <span className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-cyan-400/60 rounded-none pointer-events-none" />
-
-      
 
       {/* Glowing content */}
       <div className="flex items-center justify-between">
@@ -113,12 +114,14 @@ function FAQItem({ entry }: { entry: FAQEntry }) {
           <span className="text-lg text-gray-200">{entry.question}</span>
         </div>
 
-        <ChevronDown className={`text-cyan-300 text-xl transition-transform ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown
+          className={`text-cyan-300 text-xl transition-transform ${open ? "rotate-180" : ""}`}
+        />
       </div>
 
       {/* Answer */}
       <div
-        className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-64 mt-4 opacity-100' : 'max-h-0 opacity-0'}`}
+        className={`overflow-hidden transition-all duration-300 ${open ? "max-h-64 mt-4 opacity-100" : "max-h-0 opacity-0"}`}
       >
         <p className="text-gray-300 text-sm leading-relaxed">{entry.answer}</p>
       </div>
