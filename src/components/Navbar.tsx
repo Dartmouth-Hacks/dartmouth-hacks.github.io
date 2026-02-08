@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import MLHLogo from '../assets/images/MLHLogo.svg';
 import HackLogo from '../assets/images/hackDartmouthLogo.svg';
 
 const navItems = [
@@ -42,7 +41,19 @@ export function Navbar() {
             {open ? <X size={30} /> : <Menu size={30} />}
           </button>
 
-          <img src={MLHLogo} alt="MLH" className="absolute right-0 -top-4 md:-top-6 h-20 md:h-24 z-10" />
+          <a
+            id="mlh-trust-badge"
+            className="absolute right-0 -top-4 md:-top-6 h-20 md:h-24 z-10 block"
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=gray"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-gray.svg"
+              alt="Major League Hacking 2026 Hackathon Season"
+              className="h-full w-auto"
+            />
+          </a>
         </div>
       </header>
 
