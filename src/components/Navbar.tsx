@@ -44,7 +44,7 @@ export function Navbar() {
           <a
             id="mlh-trust-badge"
             className="absolute right-0 -top-4 md:-top-6 h-20 md:h-24 z-10 block"
-            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=gray"
+            href="https://mlh.io/na"
             target="_blank"
             rel="noreferrer"
           >
