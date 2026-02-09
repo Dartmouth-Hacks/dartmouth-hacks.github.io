@@ -25,7 +25,7 @@ export default function Sponsors() {
   return (
     <section id="sponsors" className="w-full py-32 flex flex-col items-center">
       <h2 className="text-orange-400 text-xl md:text-2xl tracking-wider mb-10">
-        05 <span className="mx-2">//</span> PAST SPONSORS
+        06 <span className="mx-2">//</span> PAST SPONSORS
       </h2>
 
       <div

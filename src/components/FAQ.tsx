@@ -76,7 +76,7 @@ export function FAQ() {
     >
       {/* Title */}
       <h2 className="text-center text-orange-400 text-xl md:text-2xl tracking-wider mb-10">
-        04 <span className="mx-2">//</span> FAQs
+        05 <span className="mx-2">//</span> FAQs
       </h2>
 
       {/* Two-column grid */}
