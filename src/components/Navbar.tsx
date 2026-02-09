@@ -5,6 +5,7 @@ import HackLogo from '../assets/images/hackDartmouthLogo.svg';
 const navItems = [
   { label: 'HackDartmouth', href: '#hero' },
   { label: 'About', href: '#about' },
+  { label: 'Schedule', href: '#schedule' },
   { label: 'Apply', href: '#apply' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
