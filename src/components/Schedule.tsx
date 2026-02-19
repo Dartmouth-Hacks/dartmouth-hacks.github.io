@@ -93,13 +93,13 @@ export function Schedule() {
 
       <div className="w-full max-w-6xl flex flex-col gap-8">
         <DaySchedule
-          title="Saturday, April 26th"
+          title="Saturday, April 11th"
           subtitle="Day One"
           note="All rooms are in the ECSC building unless otherwise noted."
           items={saturdayEvents}
         />
         <DaySchedule
-          title="Sunday, April 27th"
+          title="Sunday, April 12th"
           subtitle="Day Two"
           items={sundayEvents}
         />
@@ -107,4 +107,3 @@ export function Schedule() {
     </section>
   );
 }
-
