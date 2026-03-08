@@ -1,10 +1,7 @@
 import React from 'react';
 
 import DartmouthCsLogo from '../assets/images/DartmouthCS_logo.png';
-import LogoMonoLight from '../assets/images/LogoMonoLight.png';
-import LogoWordmark from '../assets/images/Logo___wordmark_(2).png';
-import MavisTire from '../assets/images/mavistire.png';
-import NeuralinkLogo from '../assets/images/Neuralink_Logo.png';
+import PureButtons from '../assets/images/pure_buttons.png';
 import RedBullLogo from '../assets/images/Red-Bull-logo.png';
 import ThayerLogo from '../assets/images/Thayer_Logo_(1).png';
 
@@ -14,11 +11,8 @@ const featuredSponsors = [
 ];
 
 const supportingSponsors = [
-  { name: 'Anduril', logo: LogoMonoLight },
-  { name: '???', logo: LogoWordmark },
-  { name: 'Neuralink', logo: NeuralinkLogo },
   { name: 'Red Bull', logo: RedBullLogo },
-  { name: 'Mavis Tire', logo: MavisTire },
+  { name: 'Pure Buttons', logo: PureButtons },
 ];
 
 export default function Sponsors() {

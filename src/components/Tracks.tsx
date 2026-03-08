@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import arvrIcon from '../assets/tracks/arvr.svg';
-import blockchainIcon from '../assets/tracks/blockchain.svg';
+import aiIcon from '../assets/tracks/blockchain.svg';
 import educationIcon from '../assets/tracks/education.svg';
 import gamingIcon from '../assets/tracks/gaming.svg';
 import healthcareIcon from '../assets/tracks/healthcare.svg';
@@ -56,12 +56,12 @@ const tracks: Track[] = [
     icon: arvrIcon,
   },
   {
-    id: 'blockchain',
-    title: 'Blockchain',
-    color: 'from-[#5A1F50] to-[#2B2B2B]',
-    blurb: 'Ship trustworthy systems with decentralized tech.',
-    details: ['Governance', 'Social Impact', 'Interoperability', 'Security', 'Non-Fungible Tokens', 'Cryptocurrency'],
-    icon: blockchainIcon,
+    id: 'ai',
+    title: 'AI',
+    color: 'from-[#1F3A5A] to-[#2B2B2B]',
+    blurb: 'Use machine learning to solve real-world problems.',
+    details: ['Large Language Models', 'Computer Vision', 'Generative AI', 'Responsible AI & Ethics', 'AI Agents', 'ML for Social Good'],
+    icon: aiIcon,
   },
 ];
 
