@@ -4,6 +4,9 @@ import DartmouthCsLogo from '../assets/images/DartmouthCS_logo.png';
 import PureButtons from '../assets/images/pure_buttons.png';
 import RedBullLogo from '../assets/images/Red-Bull-logo.png';
 import ThayerLogo from '../assets/images/Thayer_Logo_(1).png';
+import FoundrLogo from '../assets/images/Foundr Logo 01.png';
+import FirstCapitalLogo from '../assets/images/FirstCapitalLogo.jpeg';
+import AsephaLogo from '../assets/images/Asephalogo.png';
 
 const featuredSponsors = [
   { name: 'Dartmouth Department of Computer Science', logo: DartmouthCsLogo },
@@ -13,13 +16,16 @@ const featuredSponsors = [
 const supportingSponsors = [
   { name: 'Red Bull', logo: RedBullLogo },
   { name: 'Pure Buttons', logo: PureButtons },
+  { name: 'Foundr', logo: FoundrLogo },
+  { name: 'FirstCapital', logo: FirstCapitalLogo },
+  { name: 'Asepha', logo: AsephaLogo },
 ];
 
 export default function Sponsors() {
   return (
     <section id="sponsors" className="w-full py-32 flex flex-col items-center">
       <h2 className="text-orange-400 text-xl md:text-2xl tracking-wider mb-10">
-        06 <span className="mx-2">//</span> PAST SPONSORS
+        06 <span className="mx-2">//</span> SPONSORS
       </h2>
 
       <div
