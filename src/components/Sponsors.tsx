@@ -10,17 +10,17 @@ import FirstCapitalLogo from '../assets/images/FirstCapitalLogo.jpeg';
 import AsephaLogo from '../assets/images/Asephalogo.png';
 
 const featuredSponsors = [
-  { name: 'Dartmouth Department of Computer Science', logo: DartmouthCsLogo },
-  { name: 'Thayer School of Engineering', logo: ThayerLogo },
+  { name: 'Dartmouth Department of Computer Science', logo: DartmouthCsLogo, url: 'https://web.cs.dartmouth.edu/' },
+  { name: 'Thayer School of Engineering', logo: ThayerLogo, url: 'https://engineering.dartmouth.edu/#' },
 ];
 
 const supportingSponsors = [
-  { name: 'Red Bull', logo: RedBullLogo },
-  { name: 'Appwrite', logo: AppwriteLogo },
-  { name: 'Pure Buttons', logo: PureButtons },
-  { name: 'Foundr', logo: FoundrLogo },
-  { name: 'FirstCapital', logo: FirstCapitalLogo },
-  { name: 'Asepha', logo: AsephaLogo },
+  { name: 'Red Bull', logo: RedBullLogo, url: 'https://www.redbull.com/us-en' },
+  { name: 'Appwrite', logo: AppwriteLogo, url: 'https://appwrite.io/' },
+  { name: 'Pure Buttons', logo: PureButtons, url: 'https://www.purebuttons.com/' },
+  { name: 'Foundr', logo: FoundrLogo, url: 'https://Foundr.cloud' },
+  { name: 'FirstCapital', logo: FirstCapitalLogo, url: 'https://FirstCapital.vc' },
+  { name: 'Asepha', logo: AsephaLogo, url: 'https://www.asepha.ai/' },
 ];
 
 export default function Sponsors() {
@@ -60,10 +60,11 @@ type SponsorCardProps = {
   name: string;
   logo: string;
   className?: string;
+  url?: string;
 };
 
-function SponsorCard({ name, logo, className = '' }: SponsorCardProps) {
-  return (
+function SponsorCard({ name, logo, className = '', url }: SponsorCardProps) {
+  const card = (
     <div
       className={`group relative overflow-hidden rounded-md border border-cyan-400/30 bg-white shadow-[0_25px_65px_rgba(5,22,30,0.25)] ${className}`}
     >
@@ -72,5 +73,20 @@ function SponsorCard({ name, logo, className = '' }: SponsorCardProps) {
         <img src={logo} alt={name} className="max-h-full max-w-full object-contain" />
       </div>
     </div>
+  );
+
+  if (!url) {
+    return card;
+  }
+
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noreferrer"
+      className="block"
+    >
+      {card}
+    </a>
   );
 }
