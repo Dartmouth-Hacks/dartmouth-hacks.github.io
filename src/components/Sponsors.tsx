@@ -3,6 +3,7 @@ import React from 'react';
 import DartmouthCsLogo from '../assets/images/DartmouthCS_logo.png';
 import PureButtons from '../assets/images/pure_buttons.png';
 import RedBullLogo from '../assets/images/Red-Bull-logo.png';
+import AppwriteLogo from '../assets/images/appwrite.png';
 import ThayerLogo from '../assets/images/Thayer_Logo_(1).png';
 import FoundrLogo from '../assets/images/Foundr Logo 01.png';
 import FirstCapitalLogo from '../assets/images/FirstCapitalLogo.jpeg';
@@ -15,6 +16,7 @@ const featuredSponsors = [
 
 const supportingSponsors = [
   { name: 'Red Bull', logo: RedBullLogo },
+  { name: 'Appwrite', logo: AppwriteLogo },
   { name: 'Pure Buttons', logo: PureButtons },
   { name: 'Foundr', logo: FoundrLogo },
   { name: 'FirstCapital', logo: FirstCapitalLogo },
