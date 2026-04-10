@@ -20,7 +20,7 @@ const faqs: FAQEntry[] = [
   {
     question: "How do teams work?",
     answer:
-      "You can hack solo or in a team. We'll run a team formation social before hacking starts, so it's fine to arrive without a group in mind.",
+      "Teams must have 2-4 hackers. We'll run a team formation social before hacking starts so you can meet people and form or join a group, but solo projects are not allowed.",
   },
   {
     question: "What should I bring?",
