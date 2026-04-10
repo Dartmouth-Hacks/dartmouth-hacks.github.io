@@ -9,6 +9,7 @@ import FoundrLogo from '../assets/images/Foundr Logo 01.png';
 import FirstCapitalLogo from '../assets/images/FirstCapitalLogo.jpeg';
 import AsephaLogo from '../assets/images/Asephalogo.png';
 import LiveAvatarLogo from '../assets/images/liveavatar_logo_vertical_dark.png';
+import AdaptionalLogo from '../assets/images/Adaptional vertical 300dpi.jpg';
 
 const featuredSponsors = [
   { name: 'Dartmouth Department of Computer Science', logo: DartmouthCsLogo, url: 'https://web.cs.dartmouth.edu/' },
@@ -23,6 +24,7 @@ const supportingSponsors = [
   { name: 'FirstCapital', logo: FirstCapitalLogo, url: 'https://FirstCapital.vc' },
   { name: 'Asepha', logo: AsephaLogo, url: 'https://www.asepha.ai/' },
   { name: 'LiveAvatar', logo: LiveAvatarLogo, url: 'https://www.liveavatar.com/' },
+  { name: 'Adaptional', logo: AdaptionalLogo, url: 'https://www.adaptional.com/' },
 ];
 
 export default function Sponsors() {
