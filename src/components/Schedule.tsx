@@ -7,7 +7,7 @@ type ScheduleItem = {
 const saturdayEvents: ScheduleItem[] = [
   { time: '8:30 AM - 10:30 AM', event: 'Check-in', location: 'Atrium' },
   { time: '9:30 AM - 10:00 AM', event: 'Walkthrough Building', location: 'Meet in Atrium' },
-  { time: '9:30 AM - 10:00 AM', event: 'Workshop: FirstCapital VC Workshop', location: '008' },
+  { time: '2:00 PM - 2:30 PM', event: 'Workshop: FirstCapital VC Workshop', location: '008' },
   { time: '10:30 AM - 11:00 AM', event: 'Opening Ceremony', location: 'Atrium' },
   { time: '11:00 AM', event: 'Hacking Begins', location: '009, B10, B11, 001' },
   { time: '11:00 AM - 11:30 AM', event: 'Workshop: Finding a team', location: 'Atrium' },
