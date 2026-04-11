@@ -7,7 +7,6 @@ type ScheduleItem = {
 const saturdayEvents: ScheduleItem[] = [
   { time: '8:30 AM - 10:30 AM', event: 'Check-in', location: 'Atrium' },
   { time: '9:30 AM - 10:00 AM', event: 'Walkthrough Building', location: 'Meet in Atrium' },
-  { time: '2:00 PM - 2:30 PM', event: 'Workshop: FirstCapital VC Workshop', location: '008' },
   { time: '10:30 AM - 11:00 AM', event: 'Opening Ceremony', location: 'Atrium' },
   { time: '11:00 AM', event: 'Hacking Begins', location: '009, B10, B11, 001' },
   { time: '11:00 AM - 11:30 AM', event: 'Workshop: Finding a team', location: 'Atrium' },
@@ -25,6 +24,7 @@ const saturdayEvents: ScheduleItem[] = [
   },
   { time: '1:00 PM', event: 'Lunch (Domino\'s)', location: 'Atrium' },
   { time: '1:15 PM - 2:00 PM', event: 'Workshop: Figma Workshop', location: '008' },
+  { time: '2:00 PM - 2:30 PM', event: 'Workshop: FirstCapital VC Workshop', location: '008' },
   { time: '3:00 PM - 3:30 PM', event: 'Workshop: Hacking with Github', location: '008' },
   { time: '3:00 PM - 5:00 PM', event: 'Office Hours', location: 'HackDartmouth' },
   { time: '3:30 PM - 4:00 PM', event: 'Workshop: Intro to AI with Google Studio', location: '008' },
@@ -33,12 +33,10 @@ const saturdayEvents: ScheduleItem[] = [
   { time: '7:00 PM', event: 'Dinner', location: 'Atrium' },
   { time: '11:00 PM - 12:00 AM', event: 'Trivia Tournament (Kahoot)', location: 'Atrium' },
   { time: '12:00 AM', event: 'Coffee/Snacks/Drinks Setup', location: 'Atrium' },
-  { time: '12:00 AM - 1:00 AM', event: 'Trivia Tournament', location: 'Atrium' },
 ];
 
 const sundayEvents: ScheduleItem[] = [
   { time: '1:00 AM - 3:00 AM', event: 'Movie Night', location: 'Atrium' },
-  { time: '2:00 AM', event: 'Movie Night', location: 'Atrium' },
   { time: '7:30 AM', event: 'Breakfast pick-up', location: "Lou's" },
   { time: '8:00 AM', event: 'Breakfast (Lou\'s)', location: 'Atrium' },
   { time: '9:00 AM - 11:00 AM', event: 'Last minute office hours', location: 'Atrium' },

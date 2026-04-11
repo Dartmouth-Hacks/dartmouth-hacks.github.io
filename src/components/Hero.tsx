@@ -1,4 +1,3 @@
-import React from "react";
 
 export function Hero() {
   return (
@@ -28,13 +27,14 @@ export function Hero() {
         >
           Register
         </a>
-        <button
-          type="button"
-          disabled
-          className="btn-neon rounded px-5 py-2 text-sm bg-slate-600/40 text-slate-200 opacity-70 cursor-not-allowed"
+        <a
+          className="btn-neon rounded px-5 py-2 text-sm"
+          href="https://hackdartmouth-xi.devpost.com/"
+          target="_blank"
+          rel="noreferrer"
         >
           Devpost
-        </button>
+        </a>
       </div>
       {/* grid floor effect */}
       <div
